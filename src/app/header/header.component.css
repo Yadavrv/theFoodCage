@@ -1,0 +1,100 @@
+header {
+  margin: 0;
+  padding: 10px 0;
+  background-image: url(src/assets/img/Homebackground.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 8rem;
+  z-index: 1;
+}
+
+.divcol {
+  margin: 0;
+  padding-top: 0;
+  text-align: center;
+}
+
+.nav {
+  padding: 0px;
+  margin-left: 20%;
+  margin-top: 0px;
+}
+
+.nav ul {
+  padding: 0;
+  margin: 0;
+  padding-left: 2rem;
+}
+
+.nav ul li {
+  list-style-type: none;
+  color: rgb(234, 194, 194);
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 500;
+  margin-left: 28px;
+  width: fit-content;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.nav ul li a:hover {
+  color: rgb(0, 0, 0);
+  border-bottom: 4px solid yellowgreen;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.8 ease-in-out;
+  background-color: rgb(240, 240, 240, 0.3);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 999px) {
+ 
+  .nav {
+    position: fixed;
+    right: -280px;
+    top: 8rem;
+    width: 280px;
+    height: 22rem;
+    background-color: rgb(228, 228, 228);
+  }
+
+  .nav ul li {
+    display: block;
+    margin: 0;
+    text-align: left;
+    padding: 10px 0 10px 26px;
+    border-bottom: 1px solid #8a8a8a;
+  }
+
+  .nav_icon {
+    display: inline-block;
+    position: relative;
+    right: 0;
+    top: 0;
+  }
+
+  .nav_icon span {
+    width: 35px;
+    height: 5px;
+    background: #fff;
+    display: block;
+  }
+
+  .nav_icon span:nth-child(2) {
+    margin: 4px 0;
+  }
+
+  .navlist {
+    right: 0;
+    transition: 0.6 ease-in-out;
+  }
+}

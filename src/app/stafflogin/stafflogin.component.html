@@ -1,0 +1,16 @@
+<p style=" margin-top: 9rem;">staff login works!</p>
+<div class="login-container">
+    <h2>Staff Login</h2>
+    <form (submit)="login()">
+      <div class="form-group">
+        <label for="staffId">Staff ID</label>
+        <input type="text" id="staffId" [(ngModel)]="staffId" name="staffId" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" [(ngModel)]="password" name="password" required>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+  

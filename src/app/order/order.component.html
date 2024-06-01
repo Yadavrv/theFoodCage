@@ -1,0 +1,103 @@
+<div class="container divRow1">
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body d-flex justify-content-between align-items-center">
+          <a href="profile" class="d-flex align-items-center">
+            <i class="fas fa-user-circle fa-2x me-2"></i>
+            <span>{{ currentUser.name || 'Guest' }}</span>
+          </a>
+          <a href="#" class="d-flex align-items-center" (click)="signOut()">
+            <i class="fas fa-sign-out-alt me-2"></i>Sign Out
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="showConfirmation" class="alert alert-success alert-dismissible fade show" role="alert">
+    Order placed successfully!
+    <button type="button" class="btn-close" aria-label="Close" (click)="closeConfirmation()"></button>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card mb-4" style="max-height: 70vh; overflow-y: auto;">
+        <div class="card-header">Order Summary</div>
+        <div class="card-body">
+          <div *ngFor="let item of orders; let i = index" class="mb-4">
+            <div class="row align-items-center">
+              <div class="col-md-4">
+                <img [src]="item.imageUrl" [alt]="item.name" class="img-fluid">
+              </div>
+              <div class="col-md-6">
+                <h5 class="card-title">{{ item.name }}</h5>
+                <p class="card-text text-justify">{{ item.description }}</p>
+                <p class="card-text">
+                  <small>Price:</small> {{ item.price }}<br>
+                  <small>Total:</small> {{ item.totalPrice }}
+                </p>
+              </div>
+              <div class="col-md-2">
+                <div class="input-group">
+                  <button class="btn btn-outline-secondary" type="button" (click)="decrementQuantity(item)">-</button>
+                  <input type="number" class="form-control text-center" [(ngModel)]="item.quantity">
+                  <button class="btn btn-outline-secondary" type="button" (click)="incrementQuantity(item)">+</button>
+                </div>
+                <button class="btn btn-link text-danger mt-2" (click)="removeItem(item)">Remove</button>
+              </div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mb-4" style="position: sticky; top: 0;">
+        <div class="card-header">Checkout Summary</div>
+        <div class="card-body">
+          <p>Total Amount: {{ totalAmountWithoutDiscount }}</p>
+          <p>Discount: {{ discountAmount }}</p>
+          <p>Total Amount with Discount: {{ totalAmount }}</p>
+          <button *ngIf="!showCheckoutForm" class="btn btn-primary btn-block" (click)="proceedToCheckout()">Proceed to Checkout</button>
+        </div>
+      </div>
+
+      <div *ngIf="showCheckoutForm" class="card mb-4">
+        <div class="card-header">Enter Your Details</div>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" class="form-control" [(ngModel)]="address">
+          </div>
+          <div class="form-group">
+            <label for="contactNumber">Contact Number</label>
+            <input type="text" id="contactNumber" class="form-control" [(ngModel)]="contactNumber">
+          </div>
+          <button class="btn btn-primary btn-block mt-3" (click)="confirmBooking()">Confirm Booking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- No Order Modal -->
+<div class="modal" tabindex="-1" [ngClass]="{'show d-block': showNoOrderModal}">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">No Items in Order</h5>
+        <button type="button" class="btn-close" (click)="showNoOrderModal = false"></button>
+      </div>
+      <div class="modal-body">
+        <p>Please add items to your order before proceeding to checkout.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="showNoOrderModal = false">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

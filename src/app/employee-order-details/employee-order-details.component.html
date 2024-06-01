@@ -1,0 +1,50 @@
+<div class="divRow1">
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-12">
+        <h2>User Order Details</h2>
+        <div *ngFor="let user of usersWithOrders" class="card mb-3">
+          <div class="card-header">
+            <strong>User ID:</strong> {{ user.user.id }}
+          </div>
+          <div class="card-body">
+            <p><strong>Name:</strong> {{ user.user.name }}</p>
+            <p><strong>Email id:</strong> {{ user.user.email }}</p>
+            <p><strong>Address:</strong> {{ user.user.address }}</p>
+            <p><strong>Contact Number:</strong> {{ user.user.contactNumber }}</p>
+            <div class="orders">
+              <h5>Orders:</h5>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Order ID</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Items</th>
+                    <th>Total Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let order of user.orders">
+                    <td>{{ order.id }}</td>
+                    <td>{{ order.timestamp?.toDate() | date:'shortDate' }}</td>
+                    <td>{{ order.timestamp?.toDate() | date:'shortTime' }}</td>
+                    <td>
+                      <ul class="list-group">
+                        <li *ngFor="let item of order.items" class="list-group-item d-flex justify-content-between">
+                          <span>{{ item.name }}</span>
+                          <span>{{ item.quantity }} x {{ item.price | currency:'INR':'symbol' }}</span>
+                        </li>
+                      </ul>
+                    </td>
+                    <td>{{ order.finalTotal | currency:'INR':'symbol' }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

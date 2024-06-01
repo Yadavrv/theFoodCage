@@ -1,0 +1,54 @@
+.divRow1 {
+  background-image: url(src/assets/img/download1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 560px;
+  padding-top: 40px;
+  margin-top: 9rem;
+}
+
+.divsubRow {
+  background-color: rgb(106, 106, 106, 0.5);
+  width: fit-content;
+  text-align: justify;
+  height: fit-content;
+  margin-top: 18%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 2%;
+}
+
+a {
+  text-decoration: none;
+  font-size: 28px;
+  text-align: center;
+  color: rgb(6, 6, 6);
+}
+
+.divBox {
+  height: 4rem;
+  border: 1px solid rgb(255, 255, 255);
+  margin-top: 1rem;
+  padding: 10px;
+  font-weight: 500;
+  margin-top: 1rem;
+  padding: 10px 0;
+  background-image: url(src/assets/img/Homebackground.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.divBox:hover a {
+  text-transform: capitalize;
+  color: rgb(251, 235, 7);
+  transition: 1s ease-in-out;
+  font-size: 36px;
+  font-weight: 900;
+  cursor: pointer;
+  text-indent: 10px;
+  
+  text-transform: uppercase;
+  zoom: 100%;
+  transition: 0.7 ease-in-out;
+}

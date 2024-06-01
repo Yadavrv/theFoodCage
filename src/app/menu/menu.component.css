@@ -1,0 +1,153 @@
+.upperBox {
+  width: 100%;
+  height: 320px;
+  margin: 0;
+  padding: 10px 0;
+  background-image: url(../../assets/img/tfm.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.divBox a {
+  height: 6rem;
+  border: 1px solid rgb(255, 255, 255);
+  margin-top: 1rem;
+  color: #ff6600;
+  padding: 0px;
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  padding: 30px 0;
+  text-decoration: none;
+
+}
+
+.divBox:hover a {
+  text-transform: capitalize;
+  color: #ff6600;
+  transition: 1s ease-in-out;
+  font-size: 36px;
+  font-weight: 700;
+  cursor: pointer;
+  text-indent: 10px;
+  text-transform: uppercase;
+
+  transition: 0.7 ease-in-out;
+}
+
+
+.offer-list {
+  font-size: 1.5rem;
+  color: #333333;
+}
+
+.offer {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.offer-title {
+  font-weight: bold;
+  color: #ff6600;
+}
+
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: inline-block;
+  animation: marquee 40s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+.menu-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 12px;
+}
+
+.menu-item {
+  background-color: #c1b8b8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: calc(33.33% - 20px);
+  /* Adjust based on the number of items per row */
+}
+
+.menu-item h2 {
+  margin-top: 0;
+}
+
+.menu-item p {
+  margin-bottom: 0;
+}
+
+.sideBox {
+  padding: 20px;
+  height: fit-content;
+}
+
+.sideBox ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sideBox ul li {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #909090;
+}
+
+.sideBox ul li a {
+  text-decoration: none;
+  color: #686666;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.sideBox ul li a:hover {
+  color: #020202;
+  font-weight: 700;
+
+}
+
+.box_router {
+  float: left;
+  overflow-y: scroll;
+  height: 600px;
+}
+
+
+/* Adjust sidebar width for small devices */
+@media (max-width: 767px) {
+  .sideBox {
+    width: 100%;
+    margin-bottom: 20px;
+    /* Add some space between sidebar and content */
+  }
+}
+
+/* Adjust main content width for small devices */
+@media (max-width: 767px) {
+  .box_router {
+    width: 100%;
+  }
+}

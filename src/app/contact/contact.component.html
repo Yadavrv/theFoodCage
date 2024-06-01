@@ -1,0 +1,76 @@
+<div class="container mainDiv">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="text-center my-5">Contact The Food Cadge</h2>
+    </div>
+  </div>
+
+  <!-- Success Message -->
+  <div *ngIf="successMessage" class="alert alert-success">
+    {{ successMessage }}
+  </div>
+
+  <!-- Error Message -->
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="call-us-section">
+        <h3>Contact Details</h3>
+        <div class="contact-info">
+          <p>Phone: 700 744 4375</p>
+          <p>Email: info.com</p>
+          <b>Office Hours:</b>
+          <p>
+            Monday to Friday: 10:00 AM - 10:00 PM <br />
+            Saturday: 11:00 AM - 10:00 PM <br />
+            Sunday: Closed
+          </p>
+          <b>Location:</b>
+          <p>41B Asuran Chowk, Gorakhpur, UP 273014</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <h3>Send us a Message</h3>
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <div class="mb-2">
+          <label for="name" class="form-label">Name:</label>
+          <input type="text" class="form-control" id="name" formControlName="name" />
+          <div *ngIf="contactForm.controls['name'].invalid && contactForm.controls['name'].touched" class="text-danger">
+            Name is required.
+          </div>
+        </div>
+
+        <div class="mb-2">
+          <label for="contactNumber" class="form-label">Contact Number:</label>
+          <input type="tel" class="form-control" id="contactNumber" formControlName="contactNumber" />
+          <div *ngIf="contactForm.controls['contactNumber'].invalid && contactForm.controls['contactNumber'].touched" class="text-danger">
+            Valid contact number is required.
+          </div>
+        </div>
+
+        <div class="mb-2">
+          <label for="email" class="form-label">Email:</label>
+          <input type="email" class="form-control" id="email" formControlName="email" />
+          <div *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].touched" class="text-danger">
+            Valid email is required.
+          </div>
+        </div>
+
+        <div class="mb-2">
+          <label for="message" class="form-label">Message:</label>
+          <input type="text" class="form-control" id="message" formControlName="message" />
+          <div *ngIf="contactForm.controls['message'].invalid && contactForm.controls['message'].touched" class="text-danger">
+            Message is required.
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="!contactForm.valid">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

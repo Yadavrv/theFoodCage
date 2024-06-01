@@ -1,0 +1,45 @@
+<p style=" margin-top: 9rem;">add-food works!</p>
+
+
+
+
+
+
+<div>
+  <h2>Food Management</h2>
+  
+  <button (click)="addAllFoodItemsToFirestore()">Add All Food Items</button>
+
+  <div *ngIf="message" class="message">
+    {{ message }}
+  </div>
+</div>
+
+
+
+<!-- src/app/food-form/food-form.component.html -->
+<!-- src/app/food-form/food-form.component.html -->
+<!-- <div class="container mt-5">
+    <form [formGroup]="foodForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input id="name" formControlName="name" class="form-control" placeholder="Enter food name">
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <input id="description" formControlName="description" class="form-control" placeholder="Enter food description">
+      </div>
+      <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input id="price" type="number" formControlName="price" class="form-control" placeholder="Enter food price">
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">Image</label>
+        <input id="image" type="file" (change)="onFileSelected($event)" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="foodForm.invalid">Add Food</button>
+    </form>
+  </div> -->
+  
+  
+  

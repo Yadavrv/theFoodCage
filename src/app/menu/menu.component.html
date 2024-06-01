@@ -1,0 +1,46 @@
+<div class="container-fluid" style="margin-top: 10rem">
+  <div class="row">
+    <div class="divBox">
+      <marquee width="100%" direction="left">
+        <a routerLink="menu">Today's special: {{ todayspecial }}</a>
+      </marquee>
+    </div>
+    <div class="row upperBox"></div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="marquee">
+    <div class="marquee-content">
+      <ul class="offer-list">
+        <li class="offer">
+          <span class="offer-day">🔥 Tandoori Tuesdays:</span>
+          <span class="offer-title">Buy one tandoori item, get one free.</span>
+        </li>
+        <li class="offer">
+          <span class="offer-day">🌟 Weekend Biryani Bonanza:</span>
+          <span class="offer-title">Buy one biryani, get one free.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="container-fluid mt-3">
+  <div class="row">
+    <div class="col-md-2 col-sm-12 mx-auto sideBox">
+      <ul>
+        <li><a routerLink="/menu/starter">Starter</a></li>
+        <li><a routerLink="/menu/veg">Veg Cave</a></li>
+        <li><a routerLink="/menu/nonVeg">NonVeg Cave</a></li>
+        <li><a routerLink="/menu/dessert">Dessert</a></li>
+        <li><a routerLink="/menu/beverage">Beverage</a></li>
+      </ul>
+    </div>
+    <div class="col-md-10 col-sm-12 box_router">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4" *ngFor="let item of nonVegFoodItems">
+      <div class="card h-100">
+        <img [src]="item.imageUrl" class="card-img-top" alt="Food Image" height="200" width="300">
+        <div class="card-body">
+          <h5 class="card-title">{{ item.name }}</h5>
+          <p class="card-text  text-justify">{{ item.description }}</p>
+          <p class="card-text text-secondary" style="font-weight: 600; font-size: larger;">Price: ₹{{ item.price }}</p>
+        </div>
+        <div class="card-footer text-center">
+          <button class="btn btn-warning btn-block" (click)="addToOrder(item)">Add to Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+
+
+.mainDiv {
+  margin-top: 10rem;
+  background: linear-gradient(rgb(240, 181, 181),rgb(213, 213, 234));
+}
+
+form {
+  margin: auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+input {
+  width: 95%;
+  margin-bottom: 16px;
+  height: 3rem;
+  border-radius: 12px;
+  border: 2px solid rgb(7, 7, 7);
+  font-size: 24px;
+  text-indent: 12px;
+  padding-right: 24px;
+}
+
+button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  width: 126px;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+button:disabled {
+  background-color: #4e4d4d;
+  cursor: not-allowed;
+}
+
+
+.call-us-section {
+    color: #070707;
+    
+    text-align: center;
+   
+  }
+  
+   h3 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    padding-top: 02rem;
+    text-align: center;
+  }
+  
+  .call-us-section p {
+    font-size: 1rem;
+  }
+  .call-us-section b {
+    font-size: 2rem;
+  }
+  .contact-info {
+    margin-top: 20px;
+  }
+  
+  .contact-info p {
+    margin: 5px 0;
+    font-size: 22px;
+  }

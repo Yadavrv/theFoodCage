@@ -1,0 +1,113 @@
+<div class="container mainDiv">
+  <div class="row">
+    <div class="col-12 text-center mb-3">
+      <h2 class="text-white animate-charcter">
+        Book Your Event with <br />
+        The Food Cadge
+      </h2>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 call-us-section">
+      <img src="../../assets/img/mainIcon.jpg" class="img-fluid" />
+      <h3>Contact Us for Booking</h3>
+      <p>
+        Feel free to reach out to us for inquiries, reservations, or any
+        assistance you may need. Our team is here to help!
+      </p>
+      <div class="contact-info">
+        <p>Phone: 700 744 4375</p>
+        <p>Email: info.com</p>
+        <b> Office Hours: </b>
+        <p>
+          Monday to Friday: 10:00 AM - 10:00 PM <br />
+          Saturday: 11:00 AM - 10:00 PM <br />
+          Sunday: Closed
+        </p>
+
+        <b> Location: </b>
+        <p>41B Aasuran Chowk, Gorakhpur, UP 273014</p>
+      </div>
+    </div>
+    <div class="col-md-6 px-5">
+      <!-- <h3 class="text-center my-4 text-black">Book Online</h3> -->
+      <div>
+        <form [formGroup]="reservationForm" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              formControlName="name"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="contactNumber" class="form-label"
+              >Contact Number:</label
+            >
+            <input
+              type="tel"
+              class="form-control"
+              id="contactNumber"
+              formControlName="contactNumber"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              formControlName="email"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="dateOfReservation" class="form-label"
+              >Date of Reservation:</label
+            >
+            <input
+              type="date"
+              class="form-control"
+              id="dateOfReservation"
+              formControlName="dateOfReservation"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="eventType" class="form-label">Event Type:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="eventType"
+              formControlName="eventType"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="timeOfEvent" class="form-label">Time of Event:</label>
+            <input
+              type="time"
+              class="form-control"
+              id="timeOfEvent"
+              formControlName="timeOfEvent"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="!reservationForm.valid"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

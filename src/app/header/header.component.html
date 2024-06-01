@@ -1,0 +1,35 @@
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col ms-5 divcol">
+        <h3 style="font-size: 36px; font-weight: 700; font-variant: small-caps;">The Food Cadge</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-end">
+        <div class="nav_icon" (click)="openMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="nav" [class.navlist]="navbars">
+          <ul>
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="reservation">Reservation</a></li>
+            <li><a routerLink="menu">FoodMania</a></li>
+            <li><a routerLink="login">Log In</a></li>
+            <li><a routerLink="contact">Contact</a></li>
+            <li>
+              <a routerLink="order">
+                <i class="fas fa-shopping-cart">
+                  <span class="badge text-dark" *ngIf="orderCount !== 0">{{ orderCount }}</span>
+                </i> 
+                Order
+              </a>
+            </li>            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

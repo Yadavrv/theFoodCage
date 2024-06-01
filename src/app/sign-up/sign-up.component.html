@@ -1,0 +1,66 @@
+<div class="divRow1">
+  <h2>SignUp Here</h2>
+  <hr />
+  <div class="container">
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="mt-3">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name:</label>
+        <input
+          type="text"
+          id="name"
+          formControlName="name"
+          class="form-control"
+        />
+        <div
+          *ngIf="registrationForm.get('name')?.errors?.['required'] && registrationForm.get('name')?.touched"
+          class="invalid-feedback"
+        >
+          Name is required.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email:</label>
+        <input
+          type="email"
+          id="email"
+          formControlName="email"
+          class="form-control"
+        />
+        <div
+          *ngIf="registrationForm.get('email')?.errors?.['required'] && registrationForm.get('email')?.touched"
+          class="invalid-feedback"
+        >
+          Email is required.
+        </div>
+        <div
+          *ngIf="registrationForm.get('email')?.errors?.['email'] && registrationForm.get('email')?.touched"
+          class="invalid-feedback"
+        >
+          Please enter a valid email address.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password:</label>
+        <input
+          type="password"
+          id="password"
+          formControlName="password"
+          class="form-control"
+        />
+        <div
+          *ngIf="registrationForm.get('password')?.errors?.['required'] && registrationForm.get('password')?.touched"
+          class="invalid-feedback"
+        >
+          Password is required.
+        </div>
+      </div>
+      <button
+        type="submit"
+        [disabled]="registrationForm.invalid"
+        class="btn btn-primary"
+      >
+        Register
+      </button>
+    </form>
+  </div>
+</div>

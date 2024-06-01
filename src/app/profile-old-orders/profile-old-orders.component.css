@@ -1,0 +1,56 @@
+.container-fluid {
+    display: flex;
+    margin-top: 10rem;
+  }
+  
+  .col-3 {
+    background-color: #f8f9fa;
+    padding: 20px;
+  }
+  
+  .sidebar {
+    margin-top: 12%;
+  }
+  
+  .list-group-item {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .list-group-item:hover {
+    background-color: #e9ecef;
+  }
+  
+  .list-group-item ul {
+    list-style-type: none;
+    padding-left: 20px;
+    margin-top: 5px;
+  }
+  
+  .list-group-item ul li {
+    padding: 5px 0;
+  }
+  
+  hr {
+    margin: 5px 0;
+    border: 0;
+    border-top: 1px solid #dee2e6;
+  }
+  
+  .col-9 {
+    background-color: #fff;
+    padding: 20px;
+  }
+  
+  .list-group-item-action:hover {
+    background-color: #f0f0f0; /* Example hover background color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  /* Additional styles for nested list items if needed */
+  .list-group-item-action ul li:hover {
+    background-color: #e0e0e0; /* Different hover background color for nested items */
+  }
+  
